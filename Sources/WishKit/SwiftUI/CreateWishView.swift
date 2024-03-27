@@ -71,6 +71,7 @@ struct CreateWishView: View {
                         .padding([.leading, .trailing, .bottom], 5)
 
                         TextField("", text: $titleText)
+                            .font(WishKit.theme.font.defaultText)
                             .padding(10)
                             .textFieldStyle(.plain)
                             .foregroundColor(textColor)
@@ -89,6 +90,7 @@ struct CreateWishView: View {
                         .padding([.leading, .trailing, .bottom], 5)
 
                         TextEditor(text: $descriptionText)
+                            .font(WishKit.theme.font.defaultText)
                             .padding([.leading, .trailing], 5)
                             .padding([.top, .bottom], 10)
                             .lineSpacing(3)
@@ -119,6 +121,7 @@ struct CreateWishView: View {
                             }
 
                             TextField("", text: $emailText)
+                                .font(WishKit.theme.font.defaultText)
                                 .padding(10)
                                 .textFieldStyle(.plain)
                                 .foregroundColor(textColor)
