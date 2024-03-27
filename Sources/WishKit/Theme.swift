@@ -24,19 +24,24 @@ public struct Theme {
 
     /// The color of the title and description of a feature.
     public var textColor: Scheme?
+    
+    /// The fonts used in the WishKit UI
+    public var font: Theme.Font
 
     init(
         primaryColor: Color = Theme.systemGreen,
         badgeColor: BadgeTheme = .default(),
         secondaryColor: Scheme? = nil,
         tertiaryColor: Scheme? = nil,
-        textColor: Scheme? = nil
+        textColor: Scheme? = nil,
+        font: Theme.Font = .init()
     ) {
         self.primaryColor = primaryColor
         self.badgeColor = badgeColor
         self.secondaryColor = secondaryColor
         self.tertiaryColor = tertiaryColor
         self.textColor = textColor
+        self.font = font
     }
 
     #if os(macOS)
@@ -112,6 +117,35 @@ extension Theme {
         /// Sets the same color for light and dark mode.
         static public func `setBoth`(to color: Color) -> Scheme {
             return Scheme(light: color, dark: color)
+        }
+    }
+}
+
+extension Theme {
+    public struct Font {
+        /// Used on the `CreateWishView`, `CommentFieldView`, `SeperatorView` and the `SingleCommentView`.
+        var caption2: SwiftUI.Font
+        /// Used on the `CommentFieldView`
+        var footnote: SwiftUI.Font
+        
+        /// Used on the `WishView`
+        var defaultTextSmall: SwiftUI.Font
+        /// Used on the `WishView`
+        var defaultText: SwiftUI.Font
+        /// Used on the `WishView`
+        var defaultTextTinyMedium: SwiftUI.Font
+        
+        init(caption2: SwiftUI.Font = .caption2,
+             footnote: SwiftUI.Font = .footnote,
+             defaultTextSmall: SwiftUI.Font = .system(size: 13),
+             defaultText: SwiftUI.Font = .system(size: 17),
+             defaultTextTinyMedium: SwiftUI.Font = .system(size: 10, weight: .medium)
+        ) {
+            self.caption2 = caption2
+            self.footnote = footnote
+            self.defaultTextSmall = defaultTextSmall
+            self.defaultText = defaultText
+            self.defaultTextTinyMedium = defaultTextTinyMedium
         }
     }
 }

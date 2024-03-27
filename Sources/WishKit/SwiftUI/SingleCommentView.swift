@@ -32,11 +32,11 @@ struct SingleCommentView: View {
             HStack(spacing: 0){
 
                 Text("\(isAdmin ? WishKit.config.localization.admin : WishKit.config.localization.user)")
-                    .font(.caption2)
+                    .font(WishKit.theme.font.caption2)
                     .foregroundColor(textColor.opacity(1/3))
                 Spacer()
                 Text(createdAt.wkFormatted())
-                    .font(.caption2)
+                    .font(WishKit.theme.font.caption2)
                     .foregroundColor(textColor.opacity(1/3))
             }
             .padding([.top, .bottom], 5)
@@ -46,7 +46,7 @@ struct SingleCommentView: View {
 
             HStack {
                 Text(comment)
-                    .font(.footnote)
+                    .font(WishKit.theme.font.footnote)
                     .padding(10)
                     .foregroundColor(textColor)
                 Spacer()

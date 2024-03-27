@@ -36,7 +36,7 @@ struct CommentFieldView: View {
         ZStack {
             TextField(WishKit.config.localization.writeAComment, text: $textFieldValue)
                 .textFieldStyle(.plain)
-                .font(.footnote)
+                .font(WishKit.theme.font.footnote)
                 .padding([.top, .leading, .bottom], 15)
                 .padding([.trailing], 40)
                 .foregroundColor(textColor)
