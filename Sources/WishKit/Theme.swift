@@ -129,7 +129,7 @@ extension Theme {
         var footnote: SwiftUI.Font
         /// Used on the `WishView`
         var defaultTextSmall: SwiftUI.Font
-        /// Used on the `WishView`
+        /// Used on the `WishView` and `WKButton`
         var defaultText: SwiftUI.Font
         /// Used on the `WishView`
         var defaultTextTinyMedium: SwiftUI.Font
