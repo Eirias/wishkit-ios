@@ -45,6 +45,7 @@ struct WKButton: View {
                     .scaleEffect(0.5)
             } else {
                 Text(text)
+                    .font(WishKit.theme.font.defaultText)
                     .foregroundColor(textColor)
                     .frame(width: size.width, height: size.height)
                     .background(getColor(for: style))
