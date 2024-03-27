@@ -89,7 +89,6 @@ struct WishView: View {
                     Text(wishResponse.title)
                         .foregroundColor(textColor)
                         .font(WishKit.theme.font.defaultText)
-                        .fontWeight(.semibold)
                         .multilineTextAlignment(.leading)
                         .lineLimit(viewKind == .list ? 1 : nil)
 
