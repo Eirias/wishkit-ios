@@ -67,7 +67,7 @@ struct CreateWishView: View {
                             Spacer()
                             Text("\(titleText.count)/50")
                         }
-                        .font(.caption2)
+                        .font(WishKit.theme.font.caption2)
                         .padding([.leading, .trailing, .bottom], 5)
 
                         TextField("", text: $titleText)
@@ -85,7 +85,7 @@ struct CreateWishView: View {
                             Spacer()
                             Text("\(descriptionText.count)/500")
                         }
-                        .font(.caption2)
+                        .font(WishKit.theme.font.caption2)
                         .padding([.leading, .trailing, .bottom], 5)
 
                         TextEditor(text: $descriptionText)
@@ -105,13 +105,13 @@ struct CreateWishView: View {
                             HStack {
                                 if WishKit.config.emailField == .optional {
                                     Text(WishKit.config.localization.emailOptional)
-                                        .font(.caption2)
+                                        .font(WishKit.theme.font.caption2)
                                         .padding([.leading, .trailing, .bottom], 5)
                                 }
 
                                 if WishKit.config.emailField == .required {
                                     Text(WishKit.config.localization.emailRequired)
-                                        .font(.caption2)
+                                        .font(WishKit.theme.font.caption2)
                                         .padding([.leading, .trailing, .bottom], 5)
                                 }
 
