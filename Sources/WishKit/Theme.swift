@@ -127,7 +127,6 @@ extension Theme {
         var caption2: SwiftUI.Font
         /// Used on the `CommentFieldView`
         var footnote: SwiftUI.Font
-        
         /// Used on the `WishView`
         var defaultTextSmall: SwiftUI.Font
         /// Used on the `WishView`
@@ -135,7 +134,7 @@ extension Theme {
         /// Used on the `WishView`
         var defaultTextTinyMedium: SwiftUI.Font
         
-        init(caption2: SwiftUI.Font = .caption2,
+        public init(caption2: SwiftUI.Font = .caption2,
              footnote: SwiftUI.Font = .footnote,
              defaultTextSmall: SwiftUI.Font = .system(size: 13),
              defaultText: SwiftUI.Font = .system(size: 17),
