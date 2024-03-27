@@ -137,7 +137,7 @@ extension Theme {
         public init(caption2: SwiftUI.Font = .caption2,
              footnote: SwiftUI.Font = .footnote,
              defaultTextSmall: SwiftUI.Font = .system(size: 13),
-             defaultText: SwiftUI.Font = .system(size: 17),
+             defaultText: SwiftUI.Font = .system(size: 17, weight: .semibold),
              defaultTextTinyMedium: SwiftUI.Font = .system(size: 10, weight: .medium)
         ) {
             self.caption2 = caption2
